@@ -15,11 +15,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func timerTapped(_ sender: Any) {
+        print("timer")
     }
-
-
+    
+    @IBAction func dateTapped(_ sender: Any) {
+        print("date")
+    }
+    
+    @IBAction func locationTapped(_ sender: Any) {
+        print("location")
+    }
+    
 }
 

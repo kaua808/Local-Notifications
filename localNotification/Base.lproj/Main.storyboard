@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="localNotification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-go-Lek" customClass="ShadowView" customModule="localNotification" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LSZ-az-D61"/>
+                                    <constraint firstAttribute="height" constant="300" id="O6W-17-Heh"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5q5-BH-PB7">
+                                <rect key="frame" x="77.5" y="223.5" width="220" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luS-w2-rcd">
+                                        <rect key="frame" x="60" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Op7-YE-Kix"/>
+                                            <constraint firstAttribute="height" constant="100" id="kzQ-da-wrW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="timerIcon"/>
+                                        <connections>
+                                            <action selector="timerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvq-hD-EJP"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M1z-fx-0oV">
+                                        <rect key="frame" x="0.0" y="120" width="220" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iub-RN-0Lf">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="GPd-Rr-VT6"/>
+                                                    <constraint firstAttribute="height" constant="100" id="a2K-yE-nxB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="dateIcon"/>
+                                                <connections>
+                                                    <action selector="dateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNe-cv-jU2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKH-g4-ylr">
+                                                <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="CIZ-if-ir0"/>
+                                                    <constraint firstAttribute="height" constant="100" id="LeK-ba-99e"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="locationIcon"/>
+                                                <connections>
+                                                    <action selector="locationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5T-nI-Zta"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fg3-go-Lek" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1UC-Qr-fIZ"/>
+                            <constraint firstItem="fg3-go-Lek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WnE-Fw-nRl"/>
+                            <constraint firstItem="5q5-BH-PB7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uF1-Uu-UJj"/>
+                            <constraint firstItem="5q5-BH-PB7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uvS-8F-fjW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +84,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="dateIcon" width="100" height="100"/>
+        <image name="locationIcon" width="100" height="100"/>
+        <image name="timerIcon" width="100" height="100"/>
+    </resources>
 </document>

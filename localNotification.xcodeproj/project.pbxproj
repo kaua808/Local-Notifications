@@ -14,6 +14,10 @@
 		C4FAB4392065C77600BA3281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4372065C77600BA3281 /* LaunchScreen.storyboard */; };
 		C4FAB4442065C77600BA3281 /* localNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB4432065C77600BA3281 /* localNotificationTests.swift */; };
 		C4FAB44F2065C77600BA3281 /* localNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB44E2065C77600BA3281 /* localNotificationUITests.swift */; };
+		C4FAB4612065C90A00BA3281 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB4602065C90A00BA3281 /* ShadowView.swift */; };
+		C4FAB4662065CB6900BA3281 /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4632065CB6800BA3281 /* TimeAlert.png */; };
+		C4FAB4672065CB6900BA3281 /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4642065CB6800BA3281 /* LocationAlert.png */; };
+		C4FAB4682065CB6900BA3281 /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4652065CB6900BA3281 /* DateAlert.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		C4FAB44A2065C77600BA3281 /* localNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = localNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FAB44E2065C77600BA3281 /* localNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localNotificationUITests.swift; sourceTree = "<group>"; };
 		C4FAB4502065C77600BA3281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4FAB4602065C90A00BA3281 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		C4FAB4632065CB6800BA3281 /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
+		C4FAB4642065CB6800BA3281 /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
+		C4FAB4652065CB6900BA3281 /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,11 @@
 		C4FAB42D2065C77600BA3281 /* localNotification */ = {
 			isa = PBXGroup;
 			children = (
+				C4FAB45F2065C82500BA3281 /* Service */,
+				C4FAB45E2065C82300BA3281 /* Model */,
+				C4FAB45D2065C82100BA3281 /* Controller */,
+				C4FAB45C2065C81B00BA3281 /* View */,
 				C4FAB42E2065C77600BA3281 /* AppDelegate.swift */,
-				C4FAB4302065C77600BA3281 /* ViewController.swift */,
 				C4FAB4322065C77600BA3281 /* Main.storyboard */,
 				C4FAB4352065C77600BA3281 /* Assets.xcassets */,
 				C4FAB4372065C77600BA3281 /* LaunchScreen.storyboard */,
@@ -123,6 +134,47 @@
 				C4FAB4502065C77600BA3281 /* Info.plist */,
 			);
 			path = localNotificationUITests;
+			sourceTree = "<group>";
+		};
+		C4FAB45C2065C81B00BA3281 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4FAB4622065CB3500BA3281 /* NotificationAssets */,
+				C4FAB4602065C90A00BA3281 /* ShadowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FAB45D2065C82100BA3281 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4FAB4302065C77600BA3281 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4FAB45E2065C82300BA3281 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FAB45F2065C82500BA3281 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C4FAB4622065CB3500BA3281 /* NotificationAssets */ = {
+			isa = PBXGroup;
+			children = (
+				C4FAB4652065CB6900BA3281 /* DateAlert.png */,
+				C4FAB4642065CB6800BA3281 /* LocationAlert.png */,
+				C4FAB4632065CB6800BA3281 /* TimeAlert.png */,
+			);
+			path = NotificationAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +286,10 @@
 			files = (
 				C4FAB4392065C77600BA3281 /* LaunchScreen.storyboard in Resources */,
 				C4FAB4362065C77600BA3281 /* Assets.xcassets in Resources */,
+				C4FAB4672065CB6900BA3281 /* LocationAlert.png in Resources */,
 				C4FAB4342065C77600BA3281 /* Main.storyboard in Resources */,
+				C4FAB4682065CB6900BA3281 /* DateAlert.png in Resources */,
+				C4FAB4662065CB6900BA3281 /* TimeAlert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FAB4612065C90A00BA3281 /* ShadowView.swift in Sources */,
 				C4FAB4312065C77600BA3281 /* ViewController.swift in Sources */,
 				C4FAB42F2065C77600BA3281 /* AppDelegate.swift in Sources */,
 			);
