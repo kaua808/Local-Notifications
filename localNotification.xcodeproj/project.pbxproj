@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4BFB868206722030053884E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB867206722030053884E /* AlertService.swift */; };
+		C4BFB86A206723D20053884E /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB869206723D20053884E /* CLService.swift */; };
+		C4BFB86C206755540053884E /* NotificationAttachmentID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB86B206755540053884E /* NotificationAttachmentID.swift */; };
 		C4FAB42F2065C77600BA3281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB42E2065C77600BA3281 /* AppDelegate.swift */; };
 		C4FAB4312065C77600BA3281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB4302065C77600BA3281 /* ViewController.swift */; };
 		C4FAB4342065C77600BA3281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4322065C77600BA3281 /* Main.storyboard */; };
@@ -18,6 +21,7 @@
 		C4FAB4662065CB6900BA3281 /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4632065CB6800BA3281 /* TimeAlert.png */; };
 		C4FAB4672065CB6900BA3281 /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4642065CB6800BA3281 /* LocationAlert.png */; };
 		C4FAB4682065CB6900BA3281 /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FAB4652065CB6900BA3281 /* DateAlert.png */; };
+		C4FAB46A2065CCD100BA3281 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAB4692065CCD100BA3281 /* UNService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4BFB867206722030053884E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		C4BFB869206723D20053884E /* CLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
+		C4BFB86B206755540053884E /* NotificationAttachmentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttachmentID.swift; sourceTree = "<group>"; };
 		C4FAB42B2065C77600BA3281 /* localNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = localNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FAB42E2065C77600BA3281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FAB4302065C77600BA3281 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 		C4FAB4632065CB6800BA3281 /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
 		C4FAB4642065CB6800BA3281 /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
 		C4FAB4652065CB6900BA3281 /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
+		C4FAB4692065CCD100BA3281 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +113,10 @@
 		C4FAB42D2065C77600BA3281 /* localNotification */ = {
 			isa = PBXGroup;
 			children = (
-				C4FAB45F2065C82500BA3281 /* Service */,
 				C4FAB45E2065C82300BA3281 /* Model */,
 				C4FAB45D2065C82100BA3281 /* Controller */,
 				C4FAB45C2065C81B00BA3281 /* View */,
+				C4FAB45F2065C82500BA3281 /* Service */,
 				C4FAB42E2065C77600BA3281 /* AppDelegate.swift */,
 				C4FAB4322065C77600BA3281 /* Main.storyboard */,
 				C4FAB4352065C77600BA3281 /* Assets.xcassets */,
@@ -156,6 +164,7 @@
 		C4FAB45E2065C82300BA3281 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4BFB86B206755540053884E /* NotificationAttachmentID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +172,9 @@
 		C4FAB45F2065C82500BA3281 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C4FAB4692065CCD100BA3281 /* UNService.swift */,
+				C4BFB867206722030053884E /* AlertService.swift */,
+				C4BFB869206723D20053884E /* CLService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -314,9 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BFB86C206755540053884E /* NotificationAttachmentID.swift in Sources */,
+				C4BFB86A206723D20053884E /* CLService.swift in Sources */,
 				C4FAB4612065C90A00BA3281 /* ShadowView.swift in Sources */,
 				C4FAB4312065C77600BA3281 /* ViewController.swift in Sources */,
+				C4FAB46A2065CCD100BA3281 /* UNService.swift in Sources */,
 				C4FAB42F2065C77600BA3281 /* AppDelegate.swift in Sources */,
+				C4BFB868206722030053884E /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
