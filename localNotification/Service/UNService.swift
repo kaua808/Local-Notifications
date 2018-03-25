@@ -49,7 +49,6 @@ class UNService: NSObject {
         let locationCategory = UNNotificationCategory(identifier: NotificationCategory.location.rawValue, actions: [locationAction], intentIdentifiers: [])
         
         unCenter.setNotificationCategories([timerCategory, dateCategory, locationCategory])
-        
     }
     
     func getAttachment(for id: NotificationAttachmentID) -> UNNotificationAttachment? {
@@ -133,6 +132,10 @@ class UNService: NSObject {
 extension UNService: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("UN did recieve response")
+        
+        if let action = NotificationActionID(rawValue: response.actionIdentifier) {
+            NotificationCenter.default.post(name: NSNotification.Name("internalNotification.handleAction"), object: action)
+        }
         
         completionHandler()
     }

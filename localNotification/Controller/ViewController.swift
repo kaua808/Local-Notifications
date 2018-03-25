@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         CLService.shared.authorize()
         
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterRegion), name: Notification.Name(rawValue: "internalNotification.enterRegion"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAction(_:)), name: Notification.Name(rawValue: "internalNotification.handleAction"), object: nil)
     }
 
     @IBAction func timerTapped(_ sender: Any) {
@@ -51,6 +52,24 @@ class ViewController: UIViewController {
     
     @objc func didEnterRegion() {
         UNService.shared.locationRequest()
+    }
+    
+    @objc func handleAction(_ sender: Notification) {
+        guard let action = sender.object as? NotificationActionID else { return }
+        
+        switch action {
+        case .timer: print("timer logic")
+        case .date: 
+            print("date logic")
+            changeBackgroundColor()
+        case .location:
+            print("location logic")
+            changeBackgroundColor()
+        }
+    }
+    
+    func changeBackgroundColor() {
+        view.backgroundColor = .blue
     }
     
 }
